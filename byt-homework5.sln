@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "byt-homework5", "byt-homework5\byt-homework5.csproj", "{9242A9CF-0B15-4CB8-BCCF-4986E3DEBB2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPattern", "DesignPattern\DesignPattern.csproj", "{AF59E8C3-6530-4A51-B35A-01946C0B6954}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9242A9CF-0B15-4CB8-BCCF-4986E3DEBB2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9242A9CF-0B15-4CB8-BCCF-4986E3DEBB2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9242A9CF-0B15-4CB8-BCCF-4986E3DEBB2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9242A9CF-0B15-4CB8-BCCF-4986E3DEBB2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF59E8C3-6530-4A51-B35A-01946C0B6954}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF59E8C3-6530-4A51-B35A-01946C0B6954}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF59E8C3-6530-4A51-B35A-01946C0B6954}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF59E8C3-6530-4A51-B35A-01946C0B6954}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
