@@ -7,17 +7,17 @@ class Program
 {
     static void Main(string[] args)
     {
-        dbEngines();
+        DbEngines();
         Thread.Sleep(2000);
         Console.WriteLine();
-        employeesAdapterDemo();
+        EmployeesAdapterDemo();
         Thread.Sleep(2000);
         Console.WriteLine();
-        observingThings();
+        ObservingThings();
     }
 
     // No need to replace this code, it should work after implementing proper factory design pattern
-    static void dbEngines()
+    static void DbEngines()
     {
         var sqlEngine = new DataAnalyticsEngine(DatabaseFactory.CreateDatabase(DatabaseType.SqlServer));
         sqlEngine.ProcessData("Query to process data for SQL Server");
@@ -27,7 +27,7 @@ class Program
     }
 
     // No need to replace this code, just implement the adapter class for it to work properly
-    static void employeesAdapterDemo()
+    static void EmployeesAdapterDemo()
     {
         string[,] employeesArray = new string[5, 4]
         {
@@ -44,18 +44,19 @@ class Program
     }
 
     // No need to replace this code, just implement the ConcreteObserver class for it to work properly
-    static void observingThings()
+    //Had to rename the methods to match the pattern
+    static void ObservingThings()
     {
         Subject RedMI = new("Red MI Mobile", 10000, "Out Of Stock");
 
         ConcreteObserver user1 = new("Anurag");
-        user1.AddSubscriber(RedMI);
+        user1.AddSubject(RedMI);
 
         ConcreteObserver user2 = new("Pranaya");
-        user2.AddSubscriber(RedMI);
+        user2.AddSubject(RedMI);
 
         ConcreteObserver user3 = new("Priyanka");
-        user3.AddSubscriber(RedMI);
+        user3.AddSubject(RedMI);
 
         Thread.Sleep(1000);
 
@@ -64,7 +65,7 @@ class Program
 
         Thread.Sleep(1000);
 
-        user3.RemoveSubscriber(RedMI);
+        user3.RemoveSubject(RedMI);
 
         Thread.Sleep(1000);
         RedMI.SetAvailability("Available");

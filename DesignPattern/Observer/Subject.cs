@@ -39,12 +39,12 @@ namespace DesignPattern.Observer
         {
             Console.WriteLine("Product Name :"
                             + ProductName + ", product Price : "
-                            + ProductPrice + " is Now available. So, notifying all Registered users ");
+                            + ProductPrice + " is Now available. So, notifying all Registered users.");
 
             Console.WriteLine();
             foreach (IObserver observer in observers)
             {
-                observer.Update(Availability);
+                observer.Update(this, Availability);
             }
         }
     }

@@ -4,6 +4,6 @@ namespace DesignPattern.Observer
 {
     public interface IObserver
     {
-        void Update(string availability);
+        void Update(Subject subject, string availability);
     }
 }
