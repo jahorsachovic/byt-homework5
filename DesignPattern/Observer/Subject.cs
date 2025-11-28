@@ -25,20 +25,20 @@ namespace DesignPattern.Observer
 
         public void RegisterObserver(IObserver observer)
         {
-            Console.WriteLine("Observer Added : " + ((ConcreteObserver)observer).UserName);
+            Console.WriteLine("Observer Added: " + ((ConcreteObserver)observer).UserName);
             observers.Add(observer);
         }
 
         public void RemoveObserver(IObserver observer)
         {
-            Console.WriteLine("Observer Removed : " + ((ConcreteObserver)observer).UserName);
+            Console.WriteLine("Observer Removed: " + ((ConcreteObserver)observer).UserName);
             observers.Remove(observer);
         }
 
         public void NotifyObservers()
         {
-            Console.WriteLine("Product Name :"
-                            + ProductName + ", product Price : "
+            Console.WriteLine("Product Name: "
+                            + ProductName + ", product Price: "
                             + ProductPrice + " is Now available. So, notifying all Registered users.");
 
             Console.WriteLine();

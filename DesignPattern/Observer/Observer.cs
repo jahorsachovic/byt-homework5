@@ -11,18 +11,14 @@ namespace DesignPattern.Observer
         //4. Removing the Observer from the Subject
         //5. Observer will get a notification from the Subject using the following Method
 
-        private String _userName;
+        private String _userName = userName;
         
         public String UserName
         {
             get => _userName;
-            set
-            {
-                _userName = userName;
-            }
         }
 
-        private Dictionary<Subject, string> _subjects = new(); 
+        private readonly Dictionary<Subject, string> _subjects = new();
         
         public void AddSubject(Subject subject)
         {
@@ -30,18 +26,15 @@ namespace DesignPattern.Observer
             _subjects.Add(subject, subject.GetAvailability());
         }
 
-        public void Update(Subject subject, string availability)
-        {
-            _subjects.Add(subject, availability);
-        }
-
-
         public void RemoveSubject(Subject subject)
         {
             subject.RemoveObserver(this);
             _subjects.Remove(subject);
         }
         
-        
+        public void Update(Subject subject, string availability)
+        {
+            _subjects[subject] = availability;
+        }
     }
 }

@@ -21,7 +21,7 @@ class Program
     {
         var sqlEngine = new DataAnalyticsEngine(DatabaseFactory.CreateDatabase(DatabaseType.SqlServer));
         sqlEngine.ProcessData("Query to process data for SQL Server");
-
+    
         var oracleEngine = new DataAnalyticsEngine(DatabaseFactory.CreateDatabase(DatabaseType.Oracle));
         oracleEngine.ProcessData("Query to process data for Oracle");
     }
@@ -60,7 +60,7 @@ class Program
 
         Thread.Sleep(1000);
 
-        Console.WriteLine("Red MI Mobile current state : " + RedMI.GetAvailability());
+        Console.WriteLine("Red MI Mobile current state: " + RedMI.GetAvailability());
         Console.WriteLine();
 
         Thread.Sleep(1000);
